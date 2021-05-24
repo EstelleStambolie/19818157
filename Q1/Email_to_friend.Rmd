@@ -14,8 +14,9 @@ knitr::opts_chunk$set(echo = FALSE)
 Hey Friend 
 
 I took the time to look into our discussion on movie ratings with some data.
-```{r}
-list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+```{r include=FALSE}
+library(tidyverse)
+list.files('/Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
 
 ```
 
@@ -28,14 +29,24 @@ movie had a rating of more than 80% on Rotten Tomatoes, audiences would rate it 
 
 Take a look at this simple and clear table showing that your first claim is not true. Only two of the ROtten Tomatoes over 80% rated films is rated over 85% by Audiences.
 ```{r}
+library(huxtable)
 Ratings_comparison_table()
 ```
 
 * Disney films may not have the highest grossing numbers, but they’ve always been the
 most profitable of all the leading studios."
+This is not necessarily true according to this graph, so sorry you will need to hold back on the confidence of a statement like that as these colourful dots help show Disney is not always top of the lot for profitability
+```{r}
+plot1.2()
+```
 
 
 * Audiences are always drawn to the highest grossing films. In fact, I bet the correlation
 between the world wide grossing numbers and audience scores would be near 80%.
 
+This graph shows the relationship between Grossing numbers and Audience scores is complex as it follows a pattern that switches from a negative to a positive correlation and so an overall correlation of 80% cannot be claimed unfortunately
+
+```{r}
+Regression_Plot(Movies)
+```
 

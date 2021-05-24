@@ -30,28 +30,41 @@ Below shows a table of all the films that Rotten tomatoes scored over 80%, only 
 ```{r}
 Ratings_comparison_table()
 ```
+Also on the note of Disney being the most profitable the graph below shows this is not necessarily so
+```{r}
+plot1.2()
+```
+As for correlation between World wide Gross an Audience score the important thing to note is that the relationship changes from negative to positive and back to negative, and therefore there is no clear correlation over all movies that one can make without putting the grossing into segments
+```{r}
+Regression_Plot(Movies)
+```
+
+Check my .rmd for the email to my friend as I struggled to knit with sourcing issues.
+
 # Question 2
 I make sure my code is sourced
 ```{r}
 library(tidyverse)
 list.files('Code/Q2/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
 ```
+Unfortunately time did not allow me to put attention to this dataset
 
+I moved onto to question three as it was emphasised as important and the dataset was highly interesting and relevant 
 # Question 3
 
 I make sure my code is sourced
 ```{r}
 library(tidyverse)
-list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+list.files('Code/Q3/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
 ```
 Since I require a formal Texevier document I load the template into my settings folder to be able to copy
-```{r message=FALSE}
+```{r eval=FALSE, message=FALSE, include=FALSE}
 Texevier::create_template("Settings")
 ```
 I can now edit the template to discuss and present my findings as the pdf output will show.
 
-For this document I create the following plot
-```{r}
-
+I read in and join the data
+```{r eval=FALSE, include=FALSE}
+Read3()
 ```
 
