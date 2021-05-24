@@ -1,30 +1,45 @@
 ---
 title: "Readme"
 author: "Estelle"
-date: "3/30/2021"
-output: html_document
+date: "5/24/2021"
+output: md_document
+variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## This is the Readme for the assignment for Nico to mark
+ 
+# Question 1
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+I read the data in 
+```{r message=FALSE}
+Movies<-Read1("C:/Users/Jamie/Documents/R/Datascience/19818157/Data/Practical/Movies/Movies.csv")
+```
+And make sure my code is sourced
+```{r}
+list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+And do some analytics to show my friend what the data says on her points.
+Below shows a table of all the films that Rotten tomatoes scored over 80%, only two have audience scores over 85% proving my friend wrong.
+```{r}
+Ratings_comparison_table()
+```
+# Question 2
 
-You can also embed plots, for example:
+# Question 3
+Since I require a formal Texevier document I load the template into my settings folder to be able to copy
+```{r message=FALSE}
+create_template("Settings")
+```
+I can now edit the template to discuss and present my findings as the pdf output will show.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+For this document I create the following plot
+```{r}
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

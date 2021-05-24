@@ -1,0 +1,41 @@
+---
+title: "Email_to_friend"
+author: "Estelle"
+date: "5/24/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## RE: Movies
+
+Hey Friend 
+
+I took the time to look into our discussion on movie ratings with some data.
+```{r}
+list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+
+```
+
+
+Check my findingsm addressing your points:
+
+* I firmly remember that Rotten Tomatoes was always a great review platform - and if a
+movie had a rating of more than 80% on Rotten Tomatoes, audiences would rate it above
+85% every time."
+
+Take a look at this simple and clear table showing that your first claim is not true. Only two of the ROtten Tomatoes over 80% rated films is rated over 85% by Audiences.
+```{r}
+Ratings_comparison_table()
+```
+
+* Disney films may not have the highest grossing numbers, but they’ve always been the
+most profitable of all the leading studios."
+
+
+* Audiences are always drawn to the highest grossing films. In fact, I bet the correlation
+between the world wide grossing numbers and audience scores would be near 80%.
+
+
