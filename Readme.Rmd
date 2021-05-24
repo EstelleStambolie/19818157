@@ -14,14 +14,15 @@ knitr::opts_chunk$set(echo = TRUE)
  
 # Question 1
 
+I make sure my code is sourced
+```{r}
+library(tidyverse)
+list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+```
+
 I read the data in 
 ```{r message=FALSE}
 Movies<-Read1("C:/Users/Jamie/Documents/R/Datascience/19818157/Data/Practical/Movies/Movies.csv")
-```
-And make sure my code is sourced
-```{r}
-list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
-
 ```
 
 And do some analytics to show my friend what the data says on her points.
@@ -30,11 +31,22 @@ Below shows a table of all the films that Rotten tomatoes scored over 80%, only 
 Ratings_comparison_table()
 ```
 # Question 2
+I make sure my code is sourced
+```{r}
+library(tidyverse)
+list.files('Code/Q2/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+```
 
 # Question 3
+
+I make sure my code is sourced
+```{r}
+library(tidyverse)
+list.files('Code/Q1/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+```
 Since I require a formal Texevier document I load the template into my settings folder to be able to copy
 ```{r message=FALSE}
-create_template("Settings")
+Texevier::create_template("Settings")
 ```
 I can now edit the template to discuss and present my findings as the pdf output will show.
 
